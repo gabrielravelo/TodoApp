@@ -1,21 +1,31 @@
 
-export const TodoEdit = ({ onDeleteAllTodo }) => {
+export const TodoEdit = ({ onAddAllTodo, onDeleteAllTodo, onPendingAllTodo }) => {
   return (
-    <div>
+    <div className="d-flex">
       <button 
         type="button" 
-        className="btn btn-success"
+        className="btn btn-outline-success"
+        onClick={ onAddAllTodo }
       >
         Completar todos
       </button>
 
       <button 
         type="button" 
-        className="btn btn-danger"
+        className="btn btn-outline-warning"
+        onClick={ onPendingAllTodo }
+      >
+        Marcas todos como pendiente
+      </button>
+
+      <button 
+        type="button" 
+        className="btn btn-outline-danger"
         onClick={ onDeleteAllTodo }
       >
         Eliminar todos
       </button>
+
     </div>
   )
 }

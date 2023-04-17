@@ -40,9 +40,39 @@ export const useTodo = () => {
     });
   }
 
+  const handleAddAllTodo = () => {
+    dispatch({
+      type: '[TODO] Complete All Todos'
+    });
+  }
+
   const handleDeleteAllTodo = () => {
     dispatch({
       type: '[TODO] Delete All Todo'
+    });
+  }
+
+  const handlePendingAllTodo = () => {
+    dispatch({
+      type: '[TODO] Pending All Todos'
+    });
+  }
+
+  const showAllCompletedTodo = () => {
+    dispatch({
+      type: '[TODO] Show All Completed Todo'
+    });
+  }
+
+  const showAllPendingTodo = () => {
+    dispatch({
+      type: '[TODO] Show All Pending Todo'
+    });
+  }
+  
+  const showAllTodo = () => {
+    dispatch({
+      type: '[TODO] Show All Todo'
     });
   }
 
@@ -53,6 +83,11 @@ export const useTodo = () => {
     handleDeletetodo, 
     handleToggleTodo, 
     handleNewTodo,
-    handleDeleteAllTodo
+    handleAddAllTodo,
+    handleDeleteAllTodo,
+    handlePendingAllTodo,
+    showAllCompletedTodo,
+    showAllPendingTodo,
+    showAllTodo,
   }
 }

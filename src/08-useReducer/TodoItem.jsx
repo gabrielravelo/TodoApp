@@ -11,13 +11,13 @@ export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
 
       <div>
         <button 
-          className="btn btn-success"
+          className={`btn ${ todo.done ? 'btn-success' : 'btn-outline-success'}`}
           onClick={ () => onToggleTodo( todo.id ) }
         >
           <i className="ri-check-line"></i>
         </button>
         <button 
-          className='btn btn-danger'
+          className='btn btn-outline-danger'
           onClick={ () => onDeleteTodo(todo.id) }
         >
           <i className="ri-delete-bin-line"></i>
